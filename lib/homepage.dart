@@ -61,11 +61,7 @@ class HomePage extends StatelessWidget {
               serviceData.data.customer.address
                   .replaceAll('Ã–', 'Ö')
                   .replaceAll('Ä°', 'İ')
-                  .replaceAll('Ü', 'Ü')
-                  .replaceAll('Ğ', 'Ğ')
-                  .replaceAll('Ş', 'Ş')
-                  .replaceAll('Ç', 'Ç')
-                  .replaceAll(RegExp.escape('GÖLCÃœK'), 'GÖLCÜK'),
+                  .replaceAll('Ãœ', 'Ü'),
             ),
             // Add more user info tiles as needed
             const SizedBox(height: 20),
