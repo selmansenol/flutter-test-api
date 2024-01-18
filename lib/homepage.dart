@@ -57,8 +57,15 @@ class HomePage extends StatelessWidget {
               serviceData.data.customer.pppPassword,
             ),
             infoTile(
-              'Addres',
-              serviceData.data.customer.address,
+              'Adres',
+              serviceData.data.customer.address
+                  .replaceAll('Ã–', 'Ö')
+                  .replaceAll('Ä°', 'İ')
+                  .replaceAll('Ü', 'Ü')
+                  .replaceAll('Ğ', 'Ğ')
+                  .replaceAll('Ş', 'Ş')
+                  .replaceAll('Ç', 'Ç')
+                  .replaceAll(RegExp.escape('GÖLCÃœK'), 'GÖLCÜK'),
             ),
             // Add more user info tiles as needed
             const SizedBox(height: 20),
@@ -72,7 +79,8 @@ class HomePage extends StatelessWidget {
                 'Tarife Id', serviceData.data.customer.tariffId.toString()),
             infoTile(
                 'Tarife Tipi', serviceData.data.customer.tariffType.toString()),
-            infoTile('Tarife Adı', serviceData.data.customer.tariffName),
+            infoTile('Tarife Adı',
+                serviceData.data.customer.tariffName.replaceAll('Ã–', 'Ö')),
             infoTile(
                 'Tarife Bitiş Tarihi',
                 DateFormat('yyyy-MM-dd')
